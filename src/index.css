@@ -1,13 +1,165 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+/*All object styles*/
+* {
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    background: #fff;
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/*App styles*/
+header{
+    position: relative;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 50px auto 20px;
+}
+
+/*Header styles*/
+header .logo {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+header .presentation{
+    margin: 50px 0;
+    width: 100%;
+    height: 500px;
+    background: url('./images/setty_1340_x800.webp') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+header .presentation:after{
+    content: 'Ексклюзивні вироби';
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    font-size: 42px;
+    font-weight: 600;
+    color: #fffff0;
+    filter: drop-shadow(0 0 4px rgb(128, 128, 128));
+}
+
+
+header ul.navigation{
+    float: right;
+    list-style: none;
+    font-size: 18px;
+}
+
+header ul.navigation li{
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+header ul.navigation li:hover{
+    opacity: 0.5;
+}
+
+header .shop-bag-button{
+    float: right;
+    cursor: pointer;
+    transition: color,transform 500ms ease;
+}
+
+header .shop-bag-button:hover,
+header .shop-bag-button.active{
+    color: #dc3d3d;
+    transform: scale(1.5);
+}
+
+header .shop-bag{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    min-height: 100px;
+    background: #fafafa;
+    -webkit-box-shadow: 4px 5px 15px -7px #606060;
+    box-shadow: 4px 5px 15px -7px #606060;
+    z-index: 1000;
+}
+
+/*Footer style*/
+footer{
+    text-align: center;
+    margin-top: 25px;
+}
+
+/*Body styles*/
+main{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item{
+    width: 30%;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+main .item .image-container {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid black;
+}
+
+main .item img {
+    width: 100%;
+    transition: transform 500ms ease;
+}
+
+main h2, main p, main b{
+    margin: 10px 20px;
+    color: #333;
+}
+
+main p, main b{
+    font-size: 20px;
+}
+
+main b{
+    color: #5fa365;
+}
+
+main .add-to-cart{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ca5252;
+    width: auto;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border: 10px;
+    cursor: pointer;
+    padding: 3px;
+    transition: transform 500ms ease;
+}
+
+main .add-to-cart:hover{
+    transform: scale(1.3) translateY(-5px);
+}
+
+main .item img:hover {
+    transform: scale(1.05);
 }
