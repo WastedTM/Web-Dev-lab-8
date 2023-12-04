@@ -30,32 +30,10 @@ header .logo {
     font-size: 24px;
 }
 
-header .presentation{
-    margin: 50px 0;
-    width: 100%;
-    height: 500px;
-    background: url('./images/setty_1340_x800.webp') no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-
-header .presentation:after{
-    content: 'Ексклюзивні вироби';
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    font-size: 42px;
-    font-weight: 600;
-    color: #fffff0;
-    filter: drop-shadow(0 0 4px rgb(128, 128, 128));
-}
-
-
 header ul.navigation{
     float: right;
     list-style: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 header ul.navigation li{
@@ -63,6 +41,11 @@ header ul.navigation li{
     margin-left: 25px;
     cursor: pointer;
     transition: opacity 500ms ease;
+}
+
+header ul.navigation li a{
+    text-decoration: none;
+    color: black;
 }
 
 header ul.navigation li:hover{
@@ -86,13 +69,12 @@ header .shop-bag{
     top: 30px;
     right: 0;
     width: 450px;
-    min-height: 100px;
     background: #fafafa;
     -webkit-box-shadow: 4px 5px 15px -7px #606060;
     box-shadow: 4px 5px 15px -7px #606060;
     z-index: 1000;
+    padding: 20px 20px 0;
 }
-
 /*Footer style*/
 footer{
     text-align: center;
@@ -104,7 +86,7 @@ main{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 main .item{
@@ -162,4 +144,94 @@ main .add-to-cart:hover{
 
 main .item img:hover {
     transform: scale(1.05);
+}
+
+/*Orders styles*/
+header .shop-bag .item {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+header .shop-bag .item img{
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+
+header .shop-bag .item h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+header .shop-bag .item p{
+    color: #797979;
+    font-weight: 600;
+}
+
+header .shop-bag .empty h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header .shop-bag .item .delete-icon{
+    color: #dc3d3d;
+    float: right;
+    position: relative;
+    top: -20px;
+    cursor: pointer;
+    transition: color,transform 500ms ease;
+}
+
+header .shop-bag .item .delete-icon:hover{
+    color: #dc2a2a;
+    transform: scale(1.4);
+}
+
+header .shop-bag .sum {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/*Collections styles*/
+.collections div {
+    display: inline-block;
+    background: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+    font-size: 18px;
+}
+
+.collections div:hover{
+    border-color: silver;
+    transform: scale(1.1);
+}
+
+.presentation{
+    margin: 25px 0;
+    width: 100%;
+    height: 500px;
+    background: url('./images/setty_1340_x800.webp') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.presentation:after{
+    content: 'Ексклюзивні вироби';
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    font-size: 42px;
+    font-weight: 600;
+    color: #fffff0;
+    filter: drop-shadow(0 0 4px rgb(128, 128, 128));
 }

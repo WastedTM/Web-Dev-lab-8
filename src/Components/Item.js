@@ -9,8 +9,8 @@ export default class Item extends React.Component{
                 </div>
                 <h2>{this.props.item.title}</h2>
                 <p>{this.props.item.collection}</p>
-                <b>{this.props.item.price}</b>
-                <div className = 'add-to-cart'>В корзину</div>
+                <b>{this.props.item.price} грн</b>
+                <div className = 'add-to-cart' onClick={()=>this.props.onAdd(this.props.item)}>В корзину</div>
             </div>
         )
     }
