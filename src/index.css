@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-body{
+body {
     background: #fff;
     color: #222;
     font-family: 'Montserrat', sans-serif;
@@ -15,7 +15,7 @@ body{
 }
 
 /*App styles*/
-header{
+header {
     position: relative;
 }
 
@@ -24,72 +24,15 @@ header{
     margin: 50px auto 20px;
 }
 
-/*Header styles*/
-header .logo {
-    font-weight: 600;
-    font-size: 24px;
-}
-
-header ul.navigation{
-    float: right;
-    list-style: none;
-    font-size: 20px;
-}
-
-header ul.navigation li{
-    display: inline;
-    margin-left: 25px;
-    cursor: pointer;
-    transition: opacity 500ms ease;
-}
-
-header ul.navigation li a{
-    text-decoration: none;
-    color: black;
-}
-
-header ul.navigation li:hover{
-    opacity: 0.5;
-}
-
-header .shop-bag-button{
-    float: right;
-    cursor: pointer;
-    transition: color,transform 500ms ease;
-}
-
-header .shop-bag-button:hover,
-header .shop-bag-button.active{
-    color: #dc3d3d;
-    transform: scale(1.5);
-}
-
-header .shop-bag{
-    position: absolute;
-    top: 30px;
-    right: 0;
-    width: 450px;
-    background: #fafafa;
-    -webkit-box-shadow: 4px 5px 15px -7px #606060;
-    box-shadow: 4px 5px 15px -7px #606060;
-    z-index: 1000;
-    padding: 20px 20px 0;
-}
-/*Footer style*/
-footer{
-    text-align: center;
-    margin-top: 25px;
-}
-
 /*Body styles*/
-main{
+main {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-main .item{
+main .item {
     width: 30%;
     margin-bottom: 50px;
     box-sizing: border-box;
@@ -109,20 +52,28 @@ main .item img {
     transition: transform 500ms ease;
 }
 
-main h2, main p, main b{
+main .item img:hover {
+    transform: scale(1.05);
+}
+
+main h2, main p, main b {
     margin: 10px 20px;
     color: #333;
 }
 
-main p, main b{
+main p, main b {
     font-size: 20px;
 }
 
-main b{
+main b {
     color: #5fa365;
 }
 
-main .add-to-cart{
+main a {
+    text-decoration: none;
+}
+
+main .add-to-cart {
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -138,100 +89,17 @@ main .add-to-cart{
     transition: transform 500ms ease;
 }
 
-main .add-to-cart:hover{
+main .add-to-cart:hover {
     transform: scale(1.3) translateY(-5px);
 }
 
-main .item img:hover {
-    transform: scale(1.05);
-}
-
-/*Orders styles*/
-header .shop-bag .item {
+/*Error page*/
+.page-not-found {
+    height:20em;
     width: 100%;
-    float: left;
-    margin-bottom: 20px;
-}
-
-header .shop-bag .item img{
-    width: 70px;
-    float: left;
-    margin-right: 20px;
-}
-
-header .shop-bag .item h2{
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-header .shop-bag .item p{
-    color: #797979;
-    font-weight: 600;
-}
-
-header .shop-bag .empty h2{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-header .shop-bag .item .delete-icon{
-    color: #dc3d3d;
-    float: right;
-    position: relative;
-    top: -20px;
-    cursor: pointer;
-    transition: color,transform 500ms ease;
-}
-
-header .shop-bag .item .delete-icon:hover{
-    color: #dc2a2a;
-    transform: scale(1.4);
-}
-
-header .shop-bag .sum {
-    float: left;
-    width: 100%;
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-/*Collections styles*/
-.collections div {
-    display: inline-block;
-    background: #f2f2f2;
-    border-radius: 50px;
-    padding: 10px 20px;
-    margin-bottom: 25px;
-    margin-right: 20px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: all 500ms ease;
-    font-size: 18px;
-}
-
-.collections div:hover{
-    border-color: silver;
-    transform: scale(1.1);
-}
-
-.presentation{
-    margin: 25px 0;
-    width: 100%;
-    height: 500px;
-    background: url('./images/setty_1340_x800.webp') no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-
-.presentation:after{
-    content: 'Ексклюзивні вироби';
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    font-size: 42px;
-    font-weight: 600;
-    color: #fffff0;
-    filter: drop-shadow(0 0 4px rgb(128, 128, 128));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
 }
