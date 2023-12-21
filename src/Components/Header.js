@@ -73,7 +73,7 @@ const Header = (props) => {
                     <li><Link to={'/'}>На головну</Link></li>
                     <li><Link to={'/About'}>Про нас</Link></li>
                     <li><Link to={'/Contacts'}>Контакти</Link></li>
-                    <li><Button type="primary" onClick={() => setModalVisible(true)}>Авторизація</Button></li>
+                    <li><Link to={"/Authorization"}>Авторизація</Link></li>
                 </ul>
                 <FaShoppingBag onClick={() => setBagOpen(bagOpen = !bagOpen)}
                                className={`shop-bag-button ${bagOpen && 'active'}`}/>

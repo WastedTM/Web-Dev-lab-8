@@ -11,6 +11,7 @@ import Other from "./Components/Other";
 import Registration from "./Components/Registration";
 import Profile from "./Components/Profile";
 import ProductOrder from "./Components/ProductOrder";
+import LogIn from "./Components/LogIn";
 
 class App extends React.Component {
     constructor(props) {
@@ -127,7 +128,7 @@ class App extends React.Component {
                         />}/>
                         <Route path="/About" element={<About/>}/>
                         <Route path="/Contacts" element={<Contacts/>}/>
-                        <Route path="/Authorization" element={<Authorization/>}/>
+                        <Route path="/Authorization" element={<LogIn/>}/>
                         <Route path="/Registration" element={<Registration/>}/>
                         <Route path="/Profile" element={<Profile/>}/>
                         <Route path="/ProductOrder" element={<ProductOrder items={this.state.orders}/>}/>
